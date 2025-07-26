@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_aco"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/ad_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserratsemibold"
+        android:paddingLeft="48dp"
+        android:paddingTop="26dp"
+        android:text="Afinador"
+        android:textAlignment="textStart"
+        android:textColor="@color/branco"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAfinadorAntigo"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundAfinador"
+        app:layout_constraintStart_toStartOf="@+id/backgroundAfinador" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:fontFamily="@font/montserratlight"
+        android:text="Afinador em testes beta e seu resultado pode não ser confiável. Use com cuidado"
+        android:textAlignment="center"
+        android:textColor="@color/cinzaclaro"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="198dp"
+            android:layout_height="125dp"
+            android:background="@drawable/btnretangularbranco"
+            android:backgroundTint="#373B40"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/dsdigital"
+                android:gravity="center"
+                android:text="on"
+                android:textAlignment="center"
+                android:textColor="@color/alerta"
+                android:textSize="110sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttonAfinadorAntigo"
+                android:layout_width="90dp"
+                android:layout_height="55dp"
+                android:background="@drawable/button_afinador_antigo"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textAllCaps="true"
+                app:layout_constraintBottom_toBottomOf="@+id/backgroundAfinador"
+                app:layout_constraintEnd_toEndOf="@+id/backgroundAfinador"
+                app:layout_constraintStart_toStartOf="@+id/backgroundAfinador" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratlight"
+                android:text="ON/OFF"
+                android:textAlignment="center"
+                android:textColor="@color/cinzaclaro"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserratlight"
+        android:text="\@acordesparacavaquinho"
+        android:textColor="@color/branco"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/backgroundAfinador"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundAfinador"
+        app:layout_constraintStart_toStartOf="@+id/backgroundAfinador"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Afinador"
+        android:textColor="@color/cinzaDark"
+        android:textSize="24sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvFrequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Frequência: 0 Hz"
+        android:textColor="@color/cinzaDark"
+        android:textSize="24sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserratlight"
+        android:text="Corda identificada"
+        android:textAlignment="center"
+        android:textColor="@color/cinzaclaro"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="198dp"
+        android:layout_height="125dp"
+        android:background="@drawable/btnretangularbranco"
+        android:backgroundTint="#373B40"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvNote"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/dsdigital"
+            android:gravity="center"
+            android:text="D"
+            android:textAlignment="center"
+            android:textColor="@color/alerta"
+            android:textSize="110sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btnretangularbranco"
+        android:backgroundTint="#373B40"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvTuningStatus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/dsdigital"
+            android:gravity="center"
+            android:text="Status"
+            android:textAlignment="center"
+            android:textColor="@color/alerta"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/margem"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/cinzaescuro"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageLuz_4"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                app:srcCompat="@drawable/luz_apagada" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/cinzaescuro"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageLuz_3"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                app:srcCompat="@drawable/luz_apagada" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/cinzaescuro"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageLuz_2"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                app:srcCompat="@drawable/luz_acesa" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="@color/cinzaescuro"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageLuz_1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                app:srcCompat="@drawable/luz_apagada" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
